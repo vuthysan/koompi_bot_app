@@ -1,6 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { MainButton } from "@twa-dev/sdk/react";
+import React from "react";
+import WebApp from "@twa-dev/sdk";
+import logo from "./logo.svg";
 
 function App() {
   return (
@@ -19,6 +22,11 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <MainButton
+        text="Click me"
+        onClick={() => WebApp.showAlert("Hello World")}
+      />
     </div>
   );
 }
